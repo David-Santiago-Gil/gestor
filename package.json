@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:gestor": "node dist/gestor/server/server.mjs"
+    "serve:ssr:gestor": "node dist/gestor/server/server.mjs",
+    "deploy": "ng build --configuration production --base-href=/gestor/ && npx angular-cli-ghpages --dir=dist/gestor/browser"
   },
   "private": true,
   "packageManager": "npm@11.9.0",
