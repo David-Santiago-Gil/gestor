@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { tarea } from './tarea.model';
 
 @Component({
   selector: 'app-tarea',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './tarea.html',
   styleUrl: './tarea.css',
 })
-export class Tarea { }
+export class Tarea {
+
+  @Input({ required: true }) tarea!: tarea;
+
+}
